@@ -11,6 +11,7 @@ export const apiGatewaySchema = Joi.object({
   ...baseSchema,
 
   USER_SERVICE_URL: Joi.string(),
+  CONTENT_SERVICE_URL: Joi.string(),
 });
 
 export const userServiceSchema = Joi.object({

@@ -49,6 +49,13 @@ export class AppConfigService extends NestConfigService {
     }
     return userServiceUrl;
   }
+  get contentServiceUrl(): string {
+    const contentServiceUrl = this.get<string>('CONTENT_SERVICE_URL');
+    if (!contentServiceUrl) {
+      throw new Error('contentServiceUrl is required');
+    }
+    return contentServiceUrl;
+  }
 
   get proxyTimeout(): number {
     const proxyTimeout = this.get<number>('HTTP_MODULE_TIMEOUT');
